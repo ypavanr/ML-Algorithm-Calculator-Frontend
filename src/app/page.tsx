@@ -1,11 +1,8 @@
-'use client';
 
 import type { NextPage } from 'next';
-import { useRouter } from 'next/navigation';
 import styles from './index.module.css';
-
+import StartButton from './components/startButton';
 const MacBookPro161: NextPage = () => {
-  const router = useRouter();
 
   return (
     <div className={styles.macbookPro161}>
@@ -25,15 +22,7 @@ const MacBookPro161: NextPage = () => {
           <li>Your dataset. Our math. Transparent results.</li>
         </ul>
       </div>
-
-      <button
-        type="button"
-        className={styles.cta}
-        onClick={() => router.push('/dataset')}
-        aria-label="Upload Dataset"
-      >
-        Upload Dataset
-      </button>
+     <StartButton/>
     </div>
   );
 };
