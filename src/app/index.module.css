@@ -32,50 +32,41 @@
     0 0 1px rgba(255,255,255,0.95);
 }
 
-.macbookPro161Child {
+.panel {
   position: absolute;
-  top: clamp(180px, 22vh, 260px);         
+  top: clamp(160px, 22vh, 240px);
   left: 50%;
   transform: translateX(-50%);
-  z-index: 1;                           
+  z-index: 1;                        
+  width: min(1100px, calc(100% - 160px));
+  padding: clamp(20px, 2.4vw, 36px) clamp(28px, 3vw, 56px);
+
+  background: rgba(217, 217, 217, 0.15);
   border-radius: 100px;
-  background-color: #d9d9d9;
-  width: min(1320px, calc(100% - 120px));
-  height: clamp(300px, 52vh, 560px);      
-  opacity: 0.15;
+  backdrop-filter: blur(3px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.18) inset, 0 6px 18px rgba(0,0,0,0.18);
+
+  color: #fff;
+  text-align: center;
 }
 
-.taglines {
-  position: absolute;
-  top: clamp(180px, 22vh, 260px);
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 2;   
-
-  width: min(1200px, calc(100% - 160px));
-  height: clamp(280px, 48vh, 520px);
+.panel ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
 
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  gap: 10px;
+  gap: 8px;
+}
 
-  padding: clamp(16px, 2.5vw, 32px) clamp(20px, 3vw, 48px);
-  text-align: center;
-
-  color: #fff;
-  font-size: clamp(16px, 1.6vw, 24px);
-  line-height: 1.25;
-
+.panel li {
+  font-size: clamp(16px, 1.6vw, 22px);
+  line-height: 1.35;
   text-shadow:
     0 2px 12px rgba(0,0,0,0.45),
     0 0 2px rgba(0,0,0,0.8);
 }
-
-.taglines li {
-  list-style: none;
-}
-
 
 
 .cta {
